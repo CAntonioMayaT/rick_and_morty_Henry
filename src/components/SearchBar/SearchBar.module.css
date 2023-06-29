@@ -1,0 +1,24 @@
+
+
+.DivSearchBar{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.SearchBar{
+    
+    background-color: transparent;
+    border: 1px solid  white; /* Quitar el borde */
+    box-shadow:0 0 10px white; 
+    border-radius: 20px; 
+}
+
+.InputButton{
+
+    background-color: white;
+    color: rgb(83, 83, 83);
+    border: 1px solid  white; /* Quitar el borde */
+    box-shadow:0 0 10px white; 
+    border-radius: 20px; 
+}

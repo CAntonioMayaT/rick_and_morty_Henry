@@ -1,3 +1,66 @@
-.App {
+@font-face {
+   font-family: get_schwifty;
+   src: url('./assets/get_schwifty.ttf');
+}
+
+body{
+   
+   background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg');
+     background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+   background-position: center; /* Centra la imagen en el contenedor */
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   width: 100vw;
+}
+
+
+#root{
+   display: flex;
+   justify-content: center;
+   width: 100vw;  
+   height: 100%;
+
+}
+
+.initialDiv{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   justify-items: center;
+   width: 100vw;
+   height: 100%;
+
+}
+
+.tittle{
    text-align: center;
+   color: #3BC9D9;
+   font-family: get_schwifty;
+   font-weight: bold;
+   text-shadow: 0 0 30px #E4F279;
+   font-size: 100px;
+   -webkit-text-stroke: 0.005px #B3D92B;
+  
+}
+
+.App {
+   width: 100vw;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   flex-flow: column nowrap;
+   text-align: center;
+
+  
+}
+.divP{
+position: fixed;
+justify-items: center;
+top: 500;
+left: 500;
+width: 100%;
+height: 100vw;
+z-index: -1;
 }

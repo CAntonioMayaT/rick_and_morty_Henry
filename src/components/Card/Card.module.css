@@ -1,0 +1,44 @@
+
+.container{ 
+    width: 15%;
+    margin: 15px;
+    border: 1px solid white;
+    border-radius: 60px; 
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.container:hover{
+ 
+}
+.name {
+    color:#B3D92B;
+    text-shadow: 0 0 30px #E4F279;
+    text-align: center;
+    
+
+}
+.text{
+    color:#3BC9D9;
+    text-shadow: 0 0 30px #3BC9D9;
+    text-align: center;
+
+}
+
+.image{
+    padding: 10px;
+    border-radius: 60px; 
+    width: 90%;
+
+    display: flex;
+    justify-self: center;
+    align-self: flex-end;
+}
+
+
+/*
+.{ color: "salmon" #F23D6D; }
+.{ color: "aqua" #3BC9D9; }
+.{ color: "verde portal" #B3D92B; }
+.{ color: "amarillo raro" #E4F279; }
+.{ color: "negro" #0D0D0D; }
+*/
