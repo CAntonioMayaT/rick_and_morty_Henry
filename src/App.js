@@ -17,10 +17,6 @@ function App() {
          <div className='App'>
             <SearchBar onSearch={(characterID) => window.alert(characterID)} />
             <Cards characters={characters} onClose={() => window.alert('Emulamos que se cierra la card')} />
-         <div className='divP'>
-         <div className='portal'>
-         </div>
-         </div>
          </div>
       </div>
    );

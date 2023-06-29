@@ -7,13 +7,19 @@
 }
 
 .SearchBar{
-    
+    height: 20px;
+    width: 250px;
     background-color: transparent;
     border: 1px solid  white; /* Quitar el borde */
     box-shadow:0 0 10px white; 
     border-radius: 20px; 
+    
 }
+.SearchBar:hover{
 
+    box-shadow:0 0 20px white; 
+   
+}
 .InputButton{
 
     background-color: white;
@@ -21,4 +27,9 @@
     border: 1px solid  white; /* Quitar el borde */
     box-shadow:0 0 10px white; 
     border-radius: 20px; 
+}
+
+.InputButton:hover{
+
+    box-shadow:0 0 20px white; 
 }
