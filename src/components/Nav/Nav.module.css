@@ -1,0 +1,13 @@
+.Navi{
+
+    display: flex;
+    align-items: center;
+
+
+    height: 3vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid  white; /* Quitar el borde */
+    box-shadow:0 0 10px white; 
+  
+    
+}

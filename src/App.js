@@ -1,22 +1,46 @@
 import React from 'react';
 import './App.css';
-import Card from './components/Card/Card';
 import Cards from './components/Cards/Cards';
-import SearchBar from './components/SearchBar/SearchBar';
-import characters, { Rick } from './data.js';
+import Nav from './components/Nav/Nav';
 
 function App() {
+
+   const example = {
+      id: 1,
+      name: 'Rick Sanchez',
+      status: 'Alive',
+      species: 'Human',
+      gender: 'Male',
+      origin: {
+         name: 'Earth (C-137)',
+         url: 'https://rickandmortyapi.com/api/location/1',
+      },
+      image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+   };
+
+
+   const [characters, setCharacters] = React.useState([]);
+
+   const onSearch = () => {setCharacters([...characters, example])};
+
+   
+   const onClose = (id) => {
+      }
+  
+
+
    return (
       <div className='initialDiv'>
-         
+         <Nav onSearch={onSearch}/>
+
+
          <div>
             <h1 className='tittle'>Rick and Morty</h1>
          </div>
        
         
          <div className='App'>
-            <SearchBar onSearch={(characterID) => window.alert(characterID)} />
-            <Cards characters={characters} onClose={() => window.alert('Emulamos que se cierra la card')} />
+            <Cards characters={characters} onClose={onClose} />
          </div>
       </div>
    );

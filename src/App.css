@@ -41,7 +41,7 @@ body{
    text-shadow: 0 0 30px #E4F279;
    font-size: 100px;
    -webkit-text-stroke: 0.005px #B3D92B;
-  
+    margin: 2vw;
 }
 
 .App {
