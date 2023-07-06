@@ -2,35 +2,39 @@ import React from 'react';
 import './App.css';
 import Cards from './components/Cards/Cards';
 import Nav from './components/Nav/Nav';
+import axios from 'axios';
 
 function App() {
 
-   const example = {
-      id: 1,
-      name: 'Rick Sanchez',
-      status: 'Alive',
-      species: 'Human',
-      gender: 'Male',
-      origin: {
-         name: 'Earth (C-137)',
-         url: 'https://rickandmortyapi.com/api/location/1',
-      },
-      image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-   };
-
-
    const [characters, setCharacters] = React.useState([]);
 
-   const onSearch = () => {setCharacters([...characters, example])};
+   function Looking(id){
+      
+      for (let i = 0; i<characters.length; i++) {
+         if (characters[i].id == id) return false; 
+     }
+     return true;
+   }
 
+   function onSearch(id) {  
+     
+     axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+         if (data.name && Looking(id)) {
+            setCharacters((oldChars) => [...oldChars, data]);
+         } else {
+            window.alert('Tu personaje ya fue agregado');
+         }
+      }) .catch((error => window.alert("No existe ese personaje")));
+   }
    
-   const onClose = (id) => {
-      }
+  function close (id) {
+   setCharacters(
+      characters.filter((pj)=>{
+         return pj.id !== Number(id)}))
+  }
   
-
-
    return (
-      <div className='initialDiv'>
+      <div className='initialDiv'> 
          <Nav onSearch={onSearch}/>
 
 
@@ -38,9 +42,8 @@ function App() {
             <h1 className='tittle'>Rick and Morty</h1>
          </div>
        
-        
          <div className='App'>
-            <Cards characters={characters} onClose={onClose} />
+            <Cards characters={characters} close={close} />
          </div>
       </div>
    );
